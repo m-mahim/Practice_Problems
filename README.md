@@ -1,2 +1,4 @@
 # Practice_1
-Trying to learn Git and GitHub
+Goal : Trying to learn Git and GitHub
+<br>
+Author : Mahim
