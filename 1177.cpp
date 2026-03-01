@@ -1,20 +1,27 @@
-// Online C++ compiler to run C++ program online
-#include <iostream>
+#include <bits/stdc++.h>
+
 using namespace std;
 
-int main(){
-    int num,cnt=0;
-    cin>>num;
-    for(int i = 0;i < 1000;i++){
-        
-        cout<<"N["<<i<<"] = "<<cnt<<endl;
-        if(cnt<num-1){
-            cnt++;
-        }else{
-            cnt=0;
-        }
-        
-    }
+int main() {
+    int k=0;
+   int  N [1000];
 
-    return 0;
+
+
+            for (int i = 0; i < 1000; i++) {
+                    for(int j = k; j < 3; j++){
+                            N[i]=j;
+                            break;
+                }
+                k++;
+                if(k>=3)
+                {
+                    k=0;
+                }
+            }
+
+      for (int i = 0; i < 1000; i++) {
+        cout << "N[" << i << "] = "<< N[i]<<endl;
+    }
+      return 0;
 }

@@ -1,3 +1,4 @@
+
 #include<bits/stdc++.h>
 
 using namespace std;
@@ -5,33 +6,30 @@ using namespace std;
 int main()
 {
 int n,x;
-int sum =0;
+int sum =1;
 cin>>n;
 for(int i=1;i<=n;i++)
 {
     cin>>x;
-    if( x%2 == 0)
+    if( x>0 )
     {
-        for(int j=1;j<x;j++)
+        for(int j=2;j<=x/2;j++)
         {
             if(x%j == 0)
                 sum+=j;
         }
-        if(sum == x)
-        {
+
+        if(sum == x){
             cout<<x<<" eh perfeito"<<endl;
         }
-        else
-        {
+        else{
             cout<<x<<" nao eh perfeito"<<endl;
         }
     }
-    else
-    {
+    else{
         cout<<x<<" nao eh perfeito"<<endl;
     }
 }
-
 return 0;
 }
 

@@ -5,30 +5,33 @@ int main()
     double A,B,C,a,b,c;
     cin>>a>>b>>c;
 
-        if( a >= b + c|| b >= a + c ||  c >= a + b)
+   A=max(c,max(a,b));
+   C=min(c,min(a,b));
+   B=a+b+c-A-C;
+
+        if( A >= B + C|| B >= A + C ||  C >= A + B)
          {cout<<"NAO FORMA TRIANGULO"<<endl;
     }
         else
             {
-        if(a*a == b*b + c*c|| b*b == a*a + c*c || c*c == a*a + b*b){
+        if(A*A == B*B + C*C){
          cout<<"TRIANGULO RETANGULO"<<endl;
     }
-        else if(a*a > b*b + c*c ||b*b >a*a + c*c || c*c > a*a + b*b ){
+        if(A*A > B*B + C*C ){
          cout<<"TRIANGULO OBTUSANGULO"<<endl;
     }
-        else if(a*a < b*b + c*c ||b*b <a*a + c*c || c*c < a*a + b*b){
+        if(A*A < B*B + C*C){
          cout<<"TRIANGULO ACUTANGULO"<<endl;
     }
-        if(a==b&&b==c&&c==a){
+        if(A==B&&B==C&&C==A){
          cout<<"TRIANGULO EQUILATERO"<<endl;
     }else{
 
-        if((a==b&&b!=c)||(b==c&&c!=a)||(c==a&&a!=b)){
+        if((A==B&&B!=C)||(B==C&&C!=A)||(C==A&&A!=B)){
          cout<<"TRIANGULO ISOSCELES"<<endl;
     }
     }
 }
     return 0;
 }
-
 

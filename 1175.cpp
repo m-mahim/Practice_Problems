@@ -1,14 +1,20 @@
 #include<bits/stdc++.h>
+
 using namespace std;
 
 int main()
 {
-    int a, b, c, d;
-    int dif;
-    scanf("%d %d %d %d", &a, &c, &b, &d);
-    dif = ((b*60)+d) - ((a*60)+c);
-    if(dif<=0)
-        dif += 24*60;
-    printf("O JOGO DUROU %d HORA(S) E %d MINUTO(S)\n", dif/60, dif%60);
-    return 0;
+int arr[20],brr[20];
+for(int i=0;i<20;i++)
+{
+    cin>>arr[i];
+}
+
+for(int j=0;j<20;j++)
+{
+    brr[j]=arr[19-j];
+    cout<<"N["<<j<<"] = "<<brr[j]<<endl;
+}
+
+return 0;
 }
